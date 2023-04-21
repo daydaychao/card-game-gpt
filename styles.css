@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+#game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+#player-hand,
+#play-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 640px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+#play-area {
+  display: grid;
+  grid-template-columns: repeat(20, 30px);
+  grid-template-rows: repeat(20, 30px);
+  gap: 2px;
+  background: #dedede;
+}
+
+.card {
+  width: 28px;
+  height: 28px;
+  background-color: lightblue;
+  border: 1px solid black;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  pointer-events: none;
+}
+
+#draw-card {
+  background-color: lightGreen;
+}
+
+.white-space {
+  background-color: white;
+  border-radius: 4px;
+}
+.white-space.hover-enabled:hover {
+  background-color: lightblue;
+}
+
+.selected {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 255, 0.5);
+}
